@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fadcd9;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1 {
+  min-width: 44px;
+  min-height: 50px;
+}
+h2, h3{
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+.navbar {
+  display: flex;
+  background: linear-gradient(to bottom, #e88ca0, #5a3641);
+  padding: 20px 30px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 99;
+  position: fixed;
+}
+
+.navbar-name {
+  color: #ffffff;
+  font-size: 22px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  margin: 0;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.navigation-drawer{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-drawer li{
+  margin-left: 18px;
+}
+
+#menu {
+  font-size: 18px;
+}
+
+#menu a{
+  font-family: 'Cinzel Decorative', cursive;
+  color: #1a1a1a;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  transition: 0.3 ease;
+  font-weight: 700;
+}
+
+#menu a:hover {
+  font-style: italic;
+  color:#e88ca0;
+}
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.jumbotron picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5);
+}
+
+.jumbotron .motif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: normal;
+  z-index: 1;
+}
+
+.jumbotron .motif h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 1px 1px #141414;
+}
+
+.jumbotron .motif p {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px #141414;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.navbar-hamburger{
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  display: none;
+}
+
+.navbar-hamburger:hover{
+  transform: scale(1.05);
+}
+
+.skip-link {
+  position: fixed;
+  top: 50%;
+  left: -100px;
+  background-color: #bf1722;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3 ease, left 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.skip-link:focus {
+  left: 0;
+  opacity: 1;
+}
+
+main {
+  width: 100%;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.heading-favorite {
+  margin: auto;
+  width: max-content;
+  text-align: center;
+  color: #e88ca0;
+  font-weight: 900;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.posts-restaurant {
+  margin: 32px auto auto;
+  text-align: left;
+  justify-content: center;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.restaurant-container{
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #e88ca0;
+  transition: 0.4s ease-in-out;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 0.2 ease;
+}
+
+.restaurant-container:hover{
+  transform: scale(1.05);
+}
+
+.restaurant-content {
+  padding: 16px;
+  position: relative;
+}
+
+.restaurant-image {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+}
+
+.rating_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f44336;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.rating_icon {
+  margin-right: 5px;
+}
+
+.rating-text {
+  font-size: 12px;
+}
+
+.restaurant-name {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 16px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.restaurant-name:hover{
+  color: #e88ca0;
+}
+
+.restaurant-city {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.restaurant-description{
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #141414;
+}
+
+#posts{
+  padding-top: 65px;
+}
+
+.restaurant {
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.list-detail, .list-menu{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e88ca0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.list-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  height: 30%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.list-name h2{
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.list-address, .list-about, .list-description {
+  margin-bottom: 10px;
+}
+
+.review-detail {
+  margin-bottom: 20px;
+  border: 3px solid #e88ca0;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.review-name {
+  margin-bottom: 10px;
+}
+
+.review-name h4{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.review-date {
+  font-size: 14px;
+}
+
+.review-description {
+  font-size: 16px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ce1111;
+
+  position: fixed;
+  bottom: 36px;
+  right: 16px;
+  border-radius: 25%;
+  border:0;
+
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.message {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #e88ca0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.message h3{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.message form input[type="text"],
+.message  form input[type="email"],
+.message form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 55px;
+  min-height: 55px;
+}
+
+.message form textarea {
+  height: 120px;
+}
+
+.message form button { 
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #141414;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 55px;
+    min-width: 55px;
+  }
+
+.message form button:hover {
+  background-color:#e88ca0;
+}
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #e88ca0, #5a3641);
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron img {
+    min-width: 1000px;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    filter:brightness(0.5)
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .posts-restaurant{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .jumbotron img {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+  }
+  .posts-restaurant{
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .heading-favorite {
+    font-size: 16px;
+  }
+
+  .navbar-hamburger{
+    display: block;
+    align-items: center;
+    padding: 0;
+  }
+
+  #menu {
+    padding: 20px;
+    background: linear-gradient(to top, #e88ca0, #5a3641);
+    z-index: 99;
+    font: 28px;
+    top: 80px;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    transition: left 0.3 ease-in-out;
+    left: -500px;
+  }
+
+  #menu.open {
+    left: 0;
+  }
+
+  #menu a {
+    padding: 15px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+
+  .navigation-drawer {
+    display: list-item;
+  }
+
+  .navigation-drawer li{
+    margin-bottom: 28px;
+  }
+
+}
+
+@media (max-width: 500px){
+  p {
+    font-size: 11px;
+  }
+}

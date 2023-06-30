@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e88ca0"/>
+  <meta name="description" content="All Rose Quartz Have For You">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="manifest" href="./app.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  <title>ROSE QUARTZ</title>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link" aria-label="Skip to content">Skip To Content</a>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#home"><h1 class="navbar-name" aria-label="rose quartz" tabindex="0">ROSE QUARTZ</h1></a>
+    </div>
+    <button class="navbar-hamburger" aria-label="button">☰</button>
+    <nav id="menu">
+      <ul class="navigation-drawer">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#/favorites">Favorites</a></li>
+        <li class="nav-item"><a target="__blank" href="https://github.com/callista-audi">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="jumbotron">
+    <picture>
+      <source media="(max-width: 600px)" type="image/webp"  srcset="images/heros/hero-image_2-small.webp">
+      <source media="(max-width: 600px)" type="image/jpeg" srcset="images/heros/hero-image_2-small.jpg">
+      <img class="lazyload" src="images/heros/hero-image_2-large.jpg" alt="hero-image">
+    </picture>
+    <div class="motif">
+      <h1>Rose Quartz</h1>
+      <p>Indulge in the allure of Rose Quartz at our tranquil lounge. Experience pure bliss in a sanctuary of relaxation and beauty. Welcome to Rose Quartz Lounge!!!</p>
+    </div>
+  </div>
+
+  <div id="posts"></div>
+  <div class="message">
+    <h3>Need Help??Message Here!!</h3>
+    <form onsubmit="message(event)">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <footer>
+    <p>Copyright © 2023 - ROSE QUARTZ</p>
+  </footer>
+</body>
+</html>
